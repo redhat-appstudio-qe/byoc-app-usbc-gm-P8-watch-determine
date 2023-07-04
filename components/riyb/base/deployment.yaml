@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: riyb
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-arju-tenant/byoc-app-usbc/riyb@sha256:e19ad2523b16ebdfdeea1dee68f1bb27c6d38b4b7c9d2c605dd5dd0051ef1795
         name: my-java-quarkus
         ports:
         - containerPort: 8081
