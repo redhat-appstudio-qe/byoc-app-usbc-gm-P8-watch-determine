@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: riyb
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: riyb
+    app.kubernetes.io/part-of: byoc-app-usbc
+  name: riyb
+spec:
+  rules:
+  - host: riyb-byoc-arju-tenant.apps.b05f9b9e02b63a7ea12c.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: riyb
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

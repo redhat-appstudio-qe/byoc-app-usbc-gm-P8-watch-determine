@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: riyb
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-arju-tenant/byoc-app-usbc/riyb@sha256:e19ad2523b16ebdfdeea1dee68f1bb27c6d38b4b7c9d2c605dd5dd0051ef1795
+        name: my-java-quarkus
+        resources: {}
+status: {}
